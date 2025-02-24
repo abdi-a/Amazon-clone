@@ -2,10 +2,17 @@
 *{
   margin: 0;
 }
+.body {
 
+background-color: rgb(234, 237,237);
+
+
+
+}
 
 
 /* 
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -73,4 +80,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
+} 
