@@ -1,12 +1,23 @@
 import "./Product.css";
 import PropTypes from 'prop-types';
+import { useStateValue } from "./StateProvider";
 
 function Product({ title, image, price, rating }) {
- 
-
+ const [{basket}, dispatch] = useStateValue();
+ console.log("this is abdisa basket", basket);
   const addToBasket = () => {
    
+ dispatch({
+   type:"ADD_TO_BASKET",
+   item:{
+     title:title,
+     image:image,
+    price:price,
+    rating:rating,
 
+
+   }
+ })
 
   };
 
