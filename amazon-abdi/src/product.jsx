@@ -1,24 +1,44 @@
-import "./product.css"
-import coffee from "./assets/coffe.jpg"
-const product = () => {
+import "./Product.css";
+import PropTypes from 'prop-types';
+
+function Product({ title, image, price, rating }) {
+ 
+
+  const addToBasket = () => {
+   
+
+
+  };
+
   return (
-    <div className = "product">
+    <div className="product">
       <div className="product-info">
-        <p>The lean startup </p>
+        <p>{title}</p>
         <p className="product-price">
-            <small>$</small>
-            <strong>19.99</strong>
+          <small>$</small>
+          <strong>{price}</strong>
         </p>
-      <div className="product-rating">
- <p>🌟</p>         
-
- </div>
-     
+        <div className="product-rating">
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p key={i}>🌟</p>
+            ))}
         </div>
- <img src={coffee} alt="" />
-        <button>Add to basket</button>
-    </div>
-  )
-}
+      </div>
 
-export default product
+      <img src={image} alt="" />
+
+      <button onClick={addToBasket}>Add to Basket</button>
+    </div>
+  );
+}
+Product.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired
+};
+
+
+export default Product;
