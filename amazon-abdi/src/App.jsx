@@ -1,5 +1,5 @@
 
-
+import Login from "./login"
 import Checkout from "./Checkout"
 import './App.css'
 import { Route, Routes,} from 'react-router-dom';
@@ -11,9 +11,21 @@ function App() {
   return (
     
    <div className="app">
-  <Header />
-   <Routes>
-       <Route path = "/checkout" element = {<Checkout/>}/>
+            <Header />
+     
+      
+   <Routes>  
+       <Route path = "/login" 
+       
+       element = {<Login/>}
+       
+       />
+       <Route    path = "/checkout" 
+
+       element = {<Checkout/>}/>
+       
+
+
        <Route path = "/" element = {<Home/>}/>
       </Routes>
 
@@ -25,7 +37,7 @@ function App() {
 
 
 
-
+    
 
     
       {/* <Home/> */}

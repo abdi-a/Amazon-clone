@@ -32,14 +32,17 @@ const [{basket}, dispatch] = useStateValue();
 
      </div>
   <div className="header_nav">
+    <Link to ="login">
  <div className="header-option">
    <span className="header-optionLineOne">
     Hello Abdi
   </span> <span className="header-optionLineTwo">
     Sign In
   </span>
-  
   </div> 
+  </Link>
+      
+
 <div className="header-option">
     <span className="header-optionLineOne">
     Returns
